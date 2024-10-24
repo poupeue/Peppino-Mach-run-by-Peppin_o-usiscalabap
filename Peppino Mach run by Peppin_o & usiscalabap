@@ -1,0 +1,22 @@
+--Made by Peppin_o & usiscalabap
+print("Made by Peppin_o & usiscalabap")
+pcall(function() keypress(Enum.KeyCode[string.upper("F9")]) end)
+
+local speedTool = Instance.new("Tool")
+speedTool.Name = "SpeedTool"
+speedTool.RequiresHandle = false
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local function onActivated()
+    character.Humanoid.WalkSpeed = 100 -- Adjust the speed as needed
+end
+
+local function onUnequipped()
+    character.Humanoid.WalkSpeed = 16 -- Set back to normal walk speed
+end
+
+speedTool.Activated:Connect(onActivated)
+speedTool.Unequipped:Connect(onUnequipped)
+speedTool.Parent = player.Backpack
