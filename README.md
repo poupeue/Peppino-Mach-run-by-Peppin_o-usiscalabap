@@ -1,1 +1,1 @@
-# Peppino-Mach-run-by-Peppin_o-usiscalabap
+Credits to Peppin_o and usiscalabap for making this script.
